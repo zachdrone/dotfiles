@@ -105,6 +105,4 @@ source $ZSH/oh-my-zsh.sh
 bindkey -s ^F "tmux-sessionizer\n"
 
 export PATH=$PATH:/usr/local/go/bin
-
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.local/scripts:$PATH"
+export PATH="$HOME/bin:$PATH"
