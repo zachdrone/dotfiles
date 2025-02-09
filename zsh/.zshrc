@@ -106,3 +106,4 @@ bindkey -s ^F "tmux-sessionizer\n"
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
