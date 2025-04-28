@@ -104,6 +104,22 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey -s ^F "tmux-sessionizer\n"
 
+eval "$(pyenv virtualenv-init -)"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
