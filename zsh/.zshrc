@@ -104,14 +104,12 @@ source $ZSH/oh-my-zsh.sh
 
 bindkey -s ^F "tmux-sessionizer\n"
 
-eval "$(pyenv virtualenv-init -)"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
-
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
@@ -123,3 +121,5 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+eval "$(zoxide init --cmd cd zsh)"
