@@ -1,0 +1,1 @@
+podman run -it -v $(pwd):/mnt python:3.11 bash
