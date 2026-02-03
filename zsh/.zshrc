@@ -118,3 +118,4 @@ function y() {
 }
 
 eval "$(zoxide init --cmd cd zsh)"
+bindkey -v
