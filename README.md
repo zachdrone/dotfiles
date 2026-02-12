@@ -18,3 +18,4 @@ stow -vt ~ wezterm
 stow -vt ~ aerospace
 stow -vt ~/.config config
 stow -vt ~/bin scripts
+stow -vt ~ nvim
