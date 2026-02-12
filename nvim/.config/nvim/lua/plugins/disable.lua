@@ -6,4 +6,5 @@ return {
       dashboard = { enabled = false },
     },
   },
+  { "akinsho/bufferline.nvim", enabled = false },
 }
